@@ -16,7 +16,7 @@ function type() {
         target.textContent = text.substring(0, i++);
         if (i > text.length) {
             isDeleting = true;
-            setTimeout(typr, 1000);
+            setTimeout(type, 1000);
         } else {
             setTimeout(type, 150);
         }
