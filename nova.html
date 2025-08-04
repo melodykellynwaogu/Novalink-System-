@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaLink Systems — Intranet Homepage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans transition-colors duration-300">
+
+
+  <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 relative">
+    <div class="text-center space-y-2">
+      <h1 id="typewriter" class="text-4xl font-extrabold whitespace-nowrap min-h-[2.5rem]"></h1>
+      <p class="text-lg">Tech & AI Solutions.</p>
+      <p class="italic">Welcome to your digital workspace!</p>
+    </div>
+
+
+    <button id="theme-toggle" class="absolute top-4 right-4 bg-white dark:bg-gray-800 text-black dark:text-white px-3 py-1 rounded shadow hover:scale-105 transition">
+      Toggle Theme
+    </button>
+
+    <nav class="mt-4">
+      <ul class="flex flex-wrap justify-center gap-4 text-sm font-medium">
+        <li><a href="#about" class="hover:underline">About Us</a></li>
+        <li><a href="#events" class="hover:underline">Events</a></li>
+        <li><a href="#quick-access" class="hover:underline">Quick Access</a></li>
+        <li><a href="#spotlight" class="hover:underline">Spotlight</a></li>
+        <li><a href="#mission" class="hover:underline">Mission</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="max-w-5xl mx-auto p-6 space-y-10">
+    <section id="about" class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-2">About Us</h2>
+      <p>We are a leading company in our industry, dedicated to providing top-notch services to our clients.</p>
+      <p>Empowering our team to collaborate, innovate, and thrive.</p>
+    </section>
+
+    <section id="events" class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-4">Upcoming Events</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>📅 August 2: Monthly All-Hands @ 10:00 AM</li>
+        <li>🧠 August 8: Design Sprint Kickoff – Remote Room 3</li>
+        <li>🍱 August 15: Lunch & Learn – Intro to AI Writing Tools</li>
+        <li>🌳 August 22: Team Building Activity – Offsite</li>
+        <li>🎉 August 25: Remote Game Night + Giveaway</li>
+      </ul>
+    </section>
+
+    <section id="spotlight" class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-2">Team Spotlight</h2>
+      <p>
+        This week's spotlight: <strong>Amira Johnson</strong>, Senior Frontend Developer.<br />
+        “Amira led the UI redesign that boosted user engagement by 47%.<br />
+        She's our go-to React expert and mentor. Her passion for clean code is inspiring!”<br />
+        🎇🎉 Thanks for your incredible work, Amira!
+      </p>
+    </section>
+
+    <section id="quick-access" class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-4">Quick Access</h2>
+      <ul class="list-disc list-inside mb-4 space-y-1">
+        <li><a href="https://docs.novalink.com" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Company Docs</a></li>
+        <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Knowledge Base</a></li>
+        <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Timesheet</a></li>
+        <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">HR Portal</a></li>
+        <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Team Chat</a></li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 mb-2">Company Announcements</h3>
+      <p>
+        🚀 <strong>NovaAI Beta</strong> is live!<br />
+        📌 Submit feedback by <strong>August 12</strong>.<br />
+        📈 Q2 Review Portal is open – Deadline: <strong>August 30</strong>.
+      </p>
+
+      <div class="mt-8">
+        <h3 class="text-xl font-semibold mb-4">Q2 Team Productivity</h3>
+        <canvas id="performanceChart" class="w-full max-w-md mx-auto"></canvas>
+      </div>
+    </section>
+
+    <section id="mission" class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-semibold mb-2">Our Mission</h2>
+      <p>To deliver human-first tech experiences that inspire creativity and empower teams everywhere.</p>
+      <p>We redefine productivity through simplicity, automation, and innovation.</p>
+
+      <h3 class="text-xl font-semibold mt-4">Our Core Values</h3>
+      <ul class="list-disc list-inside mt-2 space-y-1">
+        <li>🤝 Collaboration over competition</li>
+        <li>🔍 Transparency builds trust</li>
+        <li>🌱 Progress through curiosity</li>
+        <li>❤️ People come first</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="bg-gray-200 dark:bg-gray-800 text-center text-sm text-gray-700 dark:text-gray-300 p-4 mt-10">
+    <p>Built with ❤️ by the NovaLink Web Team</p>
+    <p>Email: info@novalink.com</p>
+    <p>&copy; 2025 NovaLink Systems</p>
+  </footer>
+
+  <script src="nova.js"></script>
+</body>
+</html>
